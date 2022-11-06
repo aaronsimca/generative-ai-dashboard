@@ -2,12 +2,15 @@ import streamlit as st
 import pandas as pd
 from streamlit_agraph import agraph, Node, Edge, Config
 
-st.write("""
-# Generative AI Visualization
+st.set_page_config(page_title="Generative AI Database",
+                   page_icon=":boom:", layout="wide")
+with st.container():
+    st.write("""
+    # Generative AI Visualization
 
-AI content generation category🗨️: (input => output)
+    AI content generation category🗨️: (input => output)
 
-""")
+    """)
 
 
 def load_data1():
@@ -32,6 +35,7 @@ def load_data1():
 
 df = load_data1()
 st.dataframe(df)
+st.image("https://pbs.twimg.com/media/FgWJonRWYAAHcMz?format=jpg&name=4096x4096")
 
 
 def load_data2():
@@ -81,6 +85,7 @@ st.checkbox("Use width", value=True, key="use_container_width")
 df = load_data2()
 st.dataframe(df, use_container_width=st.session_state.use_container_width)
 
+st.image("https://pbs.twimg.com/media/FgQO-4BXgAQV1PJ?format=jpg&name=4096x4096")
 
 # The visualization
 st.write("""
@@ -1061,3 +1066,9 @@ config = Config(width=800,
 return_value = agraph(nodes=nodes,
                       edges=edges,
                       config=config)
+
+
+st.write("[Follow @aaronsiim on Twitter >](https://twitter.com/aaronsiim)")
+st.image("https://pbs.twimg.com/profile_images/1588722012263849984/DRJPu5eD_400x400.png",
+         width=35,
+         )
