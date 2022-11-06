@@ -35,7 +35,9 @@ def load_data1():
 
 df = load_data1()
 st.dataframe(df)
-st.image("https://pbs.twimg.com/media/FgWJonRWYAAHcMz?format=jpg&name=4096x4096")
+st.image("https://pbs.twimg.com/media/FgWJonRWYAAHcMz?format=jpg&name=4096x4096",
+         width=350,
+         )
 
 
 def load_data2():
@@ -85,7 +87,9 @@ st.checkbox("Use width", value=True, key="use_container_width")
 df = load_data2()
 st.dataframe(df, use_container_width=st.session_state.use_container_width)
 
-st.image("https://pbs.twimg.com/media/FgQO-4BXgAQV1PJ?format=jpg&name=4096x4096")
+st.image("https://pbs.twimg.com/media/FgQO-4BXgAQV1PJ?format=jpg&name=4096x4096",
+         width=350,
+         )
 
 # The visualization
 st.write("""
